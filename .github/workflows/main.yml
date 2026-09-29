@@ -29,9 +29,9 @@ jobs:
         echo "=== current directory ==="
         pwd
         echo "=== Files in current directory ==="
-        is -la
+        ls -la
         echo "=== Files in parent directory ==="
-        is -la ..
+        ls -la ..
         echo "=== Search for icon.png ==="
         find / -name "icon.png" 2>/dev/null | head -5
     - name: Generate App Icon
