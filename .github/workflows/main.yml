@@ -24,6 +24,13 @@ jobs:
         cp ../style.css www/style.css
         cp ../script2.js www/script2.js
         sed -i 's/MASUKIN_API_KEY_DISINI/${{ secrets.GROQ_API_KEY }}/g' www/script2.js
+    - name: Generate App Icon
+      run: |
+        cd fitra-ai-app
+        npm install -g cordova-res
+        mkdir -p resources
+        cp../icon.png resources/icon.png
+        cordova-res android --skip-config --copy
     - name: Build APK
       run: |
         cd fitra-ai-app
