@@ -23,6 +23,7 @@ jobs:
         cp ../index.html www/index.html
         cp ../style.css www/style.css
         cp ../script2.js www/script2.js
+        sed -i 's/MASUKIN_API_KEY_DISINI/${{ secrets.GROQ_API_KEY }}/g' www/script2.js
     - name: Build APK
       run: |
         cd fitra-ai-app
