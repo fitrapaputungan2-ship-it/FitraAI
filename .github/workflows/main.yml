@@ -40,6 +40,7 @@ jobs:
         npm install -g cordova-res
         mkdir -p resources
         cp $GITHUB_WORKSPACE/icon.png resources/icon.png
+        cp $GITHUB_WORKSPACE/splash.png resources/splash.png
         cordova-res android --skip-config --skip-splash --copy
     - name: Build APK
       run: |
