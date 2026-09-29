@@ -39,7 +39,7 @@ jobs:
         cd fitra-ai-app
         npm install -g cordova-res
         mkdir -p resources
-        cp../icon.png resources/icon.png
+        cp $GITHUB_WORKSPACE/icon.png resources/icon.png
         cordova-res android --skip-config --copy
     - name: Build APK
       run: |
