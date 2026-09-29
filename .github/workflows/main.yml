@@ -24,6 +24,16 @@ jobs:
         cp ../style.css www/style.css
         cp ../script2.js www/script2.js
         sed -i 's/MASUKIN_API_KEY_DISINI/${{ secrets.GROQ_API_KEY }}/g' www/script2.js
+    - name: Debug - List files
+      run: |
+        echo "=== current directory ==="
+        pwd
+        echo "=== Files in current directory ==="
+        is -la
+        echo "=== Files in parent directory ==="
+        is -la ..
+        echo "=== Search for icon.png ==="
+        find / -name "icon.png" 2>/dev/null | head -5
     - name: Generate App Icon
       run: |
         cd fitra-ai-app
