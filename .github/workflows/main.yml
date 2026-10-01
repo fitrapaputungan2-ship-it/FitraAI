@@ -42,6 +42,13 @@ jobs:
         cp $GITHUB_WORKSPACE/icon.png resources/icon.png
         cp $GITHUB_WORKSPACE/splash.png resources/splash.png
         cordova-res android --skip-config --skip-splash --copy
+    - name: Debug - Show config.xml
+      run: |
+        cd fitra-ai-app
+        cat config.xml
+        echo "=== icon files in res/ ==="
+        find platforms/android/app/src/main/res -name "ic_launcher*" | head -20
+
     - name: Build APK
       run: |
         cd fitra-ai-app
