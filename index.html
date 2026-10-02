@@ -3,33 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#0a0a0f">
+    <meta name="theme-color" content="#050510">
     <title>Fitra AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app">
-        <div class="header">
+        <!-- Header -->
+        <header class="header">
             <div class="header-left">
-                <div class="logo">🤖</div>
-                <div>
-                    <h1>Fitra AI</h1>
-                    <p class="status">● Online</p>
+                <span class="brand">FITRA AI</span>
+                <span class="status-dot"></span>
+                <span class="status-text" id="statusText">Ready</span>
+            </div>
+            <button class="menu-btn" id="menuBtn">⋮</button>
+        </header>
+
+        <!-- Chat Container -->
+        <main class="chat-container" id="chatContainer">
+            <!-- Welcome screen -->
+            <div class="welcome" id="welcome">
+                <div class="orb-large"></div>
+                <h1>Halo, aku Fitra AI</h1>
+                <p>Ada yang bisa aku bantu hari ini?</p>
+                <div class="suggestions">
+                    <button class="chip" data-prompt="Jelaskan sesuatu yang menarik">✨ Explain something</button>
+                    <button class="chip" data-prompt="Bantu aku brainstorming ide">💡 Brainstorm</button>
+                    <button class="chip" data-prompt="Tulis sesuatu untukku">📝 Write something</button>
+                    <button class="chip" data-prompt="Bantu aku coding">💻 Help me code</button>
                 </div>
             </div>
-            <button class="menu-btn" id="clearBtn">🗑️</button>
-        </div>
-        <div class="chat-container" id="chatContainer">
-            <div class="message ai-message">
-                <div class="avatar">🤖</div>
-                <div class="bubble">Halo! Aku Fitra AI. Ada yang bisa aku bantu?</div>
-            </div>
-        </div>
-        <div class="input-container">
-            <input type="text" id="userInput" placeholder="Ketik pesan..." autocomplete="off">
-            <button id="sendBtn">➤</button>
-        </div>
+        </main>
+
+        <!-- Input Bar -->
+        <footer class="input-bar">
+            <button class="icon-btn" id="attachBtn">＋</button>
+            <input type="text" id="userInput" placeholder="Message Fitra AI..." autocomplete="off">
+            <button class="icon-btn" id="micBtn">🎙️</button>
+            <button class="send-btn" id="sendBtn">➤</button>
+        </footer>
     </div>
+
     <script src="script2.js"></script>
 </body>
 </html>
