@@ -11,10 +11,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-brand">FITRA AI</span>
+            <button class="sidebar-close" id="sidebarClose">×</button>
+        </div>
+        <button class="new-chat-btn" id="newChatBtn">
+            <span>＋</span> Obrolan Baru
+        </button>
+        <div class="conversation-list" id="conversationList">
+            <!-- Daftar percakapan bakal di-render pake JS -->
+        </div>
+    </aside>
+
     <div class="app">
         <!-- Header -->
         <header class="header">
             <div class="header-left">
+                <button class="hamburger-btn" id="hamburgerBtn">☰</button>
                 <span class="brand">FITRA AI</span>
                 <span class="status-dot"></span>
                 <span class="status-text" id="statusText">Ready</span>
@@ -24,7 +42,6 @@
 
         <!-- Chat Container -->
         <main class="chat-container" id="chatContainer">
-            <!-- Welcome screen -->
             <div class="welcome" id="welcome">
                 <div class="orb-large"></div>
                 <h1>Halo, aku Fitra AI</h1>
